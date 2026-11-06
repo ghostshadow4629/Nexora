@@ -25,3 +25,281 @@
   border-radius: 16px;
   background: #090d18;
 }
+
+/* NEXORA — refined, understated dashboard redesign */
+:root {
+  --bg: #100e18;
+  --panel: #191624;
+  --panel2: #211d2d;
+  --muted: #a49caf;
+  --line: rgba(205, 190, 230, .12);
+  --purple: #aa91d5;
+  --blue: #8797c8;
+}
+
+body {
+  background: #100e18;
+  color: #eeeaf4;
+}
+
+.auth-visual {
+  background: #171321;
+}
+
+.auth-visual::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -180px;
+  bottom: -230px;
+  border: 1px solid rgba(181, 154, 218, .13);
+  border-radius: 50%;
+}
+
+.orbit, .hero-art, .hero-glow {
+  display: none !important;
+}
+
+.auth-copy h1 {
+  letter-spacing: -2.5px;
+}
+
+.auth-copy h1 em, .hero-content h2 em {
+  color: #c0a8df;
+}
+
+.brand-mark {
+  background: #78628f;
+  box-shadow: none;
+  border-radius: 9px;
+}
+
+.eyebrow {
+  color: #b9a2d8;
+  letter-spacing: 1.6px;
+}
+
+.sidebar {
+  background: #15121e;
+  border-right-color: rgba(205,190,230,.1);
+}
+
+.nav-item {
+  border-radius: 8px;
+}
+
+.nav-item:hover, .nav-item.active {
+  background: #292337;
+  color: #f1eaf9;
+}
+
+.nav-item.active {
+  box-shadow: inset 2px 0 #b69bd9;
+}
+
+.nav-item.active svg {
+  color: #c5a9e7;
+}
+
+.side-tip {
+  background: #201b2a;
+  border-color: rgba(205,190,230,.1);
+}
+
+.tip-icon {
+  color: #bca4d8;
+}
+
+.main-area {
+  background: #100e18;
+}
+
+.topbar {
+  background: rgba(16,14,24,.96);
+  backdrop-filter: blur(10px);
+}
+
+.status-dot {
+  box-shadow: none;
+}
+
+.content {
+  max-width: 1280px;
+}
+
+.hero-card {
+  min-height: 270px;
+  border: 1px solid rgba(190,164,222,.18);
+  border-radius: 13px;
+  background: #292239;
+  box-shadow: none;
+}
+
+.hero-content h2 {
+  font-size: clamp(30px, 3.5vw, 42px);
+}
+
+.hero-tag {
+  color: #d0c2df;
+}
+
+.hero-tag span {
+  box-shadow: none;
+}
+
+.light-btn {
+  background: #eee8f4;
+  color: #292137;
+  border-radius: 7px;
+}
+
+.section-heading {
+  margin-top: 34px;
+}
+
+.feature-grid {
+  gap: 16px;
+}
+
+.feature-card {
+  background: #191622;
+  border-color: rgba(205,190,230,.11);
+  border-radius: 11px;
+  box-shadow: none;
+  transition: border-color .18s ease, background .18s ease;
+}
+
+.feature-card:hover {
+  transform: none;
+  background: #211c2c;
+  border-color: rgba(190,164,222,.35);
+}
+
+.feature-icon {
+  border-radius: 9px;
+}
+
+.feature-icon.purple {
+  background: #30263d;
+  color: #c4a9e3;
+}
+
+.feature-icon.blue {
+  background: #252b3d;
+  color: #a7b6df;
+}
+
+.feature-icon.mint {
+  background: #24342f;
+  color: #9bc7b4;
+}
+
+.feature-arrow {
+  color: #a69bb4;
+}
+
+.feature-link {
+  color: #c3a9e2;
+}
+
+.panel, .stat-card {
+  background: #191622;
+  border-color: rgba(205,190,230,.11);
+  border-radius: 11px;
+}
+
+.primary {
+  background: #806995;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+.primary:hover {
+  background: #9279a9;
+}
+
+.auth-card input, .note-editor input,
+.note-editor textarea, .chat-input input {
+  background: #15121e;
+  border-color: rgba(205,190,230,.15);
+  border-radius: 8px;
+}
+
+.auth-card input:focus, .note-editor input:focus,
+.note-editor textarea:focus, .chat-input input:focus {
+  border-color: #a88bc9;
+}
+
+.ai-badge, .welcome-spark, .message-avatar {
+  color: #c5a9e4;
+}
+
+.ai-badge {
+  background: #30263d;
+}
+
+.prompt-chips button {
+  background: #211c2b;
+}
+
+.send-btn {
+  background: #806995;
+}
+
+.admin-shortcut {
+  background: #191622;
+}
+
+.music-page {
+  height: calc(100vh - 145px);
+  min-height: 520px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+}
+
+.music-frame {
+  min-height: 520px;
+  background: #100e18;
+}
+
+.footer {
+  border-top-color: rgba(205,190,230,.1);
+}
+
+button, a, input, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .hero-card {
+    min-height: 250px;
+  }
+
+  .hero-art {
+    display: none !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-card {
+    min-height: 245px;
+  }
+
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .music-page, .music-frame {
+    min-height: 480px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
