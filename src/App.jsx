@@ -39,6 +39,70 @@ export default function App() {
   const [admin,setAdmin] = useState(null);
   const [error,setError] = useState("");
   const [mobileNav,setMobileNav] = useState(false);
+  
+const [profileName,setProfileName] = useState("");
+const [profileImage,setProfileImage] = useState("");
+const [accentColor,setAccentColor] = useState("#806995");
+const [profileSaved,setProfileSaved] = useState(false);
+
+useEffect(() => {
+  if (!user) return;
+
+  const key = `nexora_profile_${user.id || user.email}`;
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(key) || "{}");
+    setProfileName(saved.displayName || user.name || "");
+    setProfileImage(saved.profileImage || "");
+    setAccentColor(saved.accentColor || "#806995");
+  } catch {
+    setProfileName(user.name || "");
+    setProfileImage("");
+    setAccentColor("#806995");
+  }
+}, [user]);
+
+function saveProfile(e) {
+  e.preventDefault();
+
+  const key = `nexora_profile_${user.id || user.email}`;
+
+  try {
+    localStorage.setItem(key, JSON.stringify({
+      displayName: profileName.trim() || user.name,
+      profileImage,
+      accentColor
+    }));
+
+    setProfileSaved(true);
+  } catch {
+    setError("Image too large. Please choose a smaller picture.");
+  }
+}
+
+function chooseProfileImage(e) {
+  const file = e.target.files?.[0];
+  if (!file) return;
+
+  if (!file.type.startsWith("image/")) {
+    setError("Please choose an image file.");
+    return;
+  }
+
+  if (file.size > 2 * 1024 * 1024) {
+    setError("Please choose an image smaller than 2 MB.");
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    setProfileImage(String(reader.result || ""));
+  };
+
+  reader.readAsDataURL(file);
+}
+
 
   useEffect(()=>{ if(token) request("/me",token).then(d=>setUser(d.user)).catch(()=>logout()); },[]);
   useEffect(()=>{ if(token && user) loadNotes(); },[token,user]);
