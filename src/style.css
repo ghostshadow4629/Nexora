@@ -26,7 +26,10 @@
   background: #090d18;
 }
 
-/* NEXORA — refined, understated dashboard redesign */
+/* =========================================
+   NEXORA — PROFESSIONAL PURPLE REDESIGN
+   ========================================= */
+
 :root {
   --bg: #100e18;
   --panel: #191624;
@@ -42,6 +45,7 @@ body {
   color: #eeeaf4;
 }
 
+/* Login screen */
 .auth-visual {
   background: #171321;
 }
@@ -57,18 +61,16 @@ body {
   border-radius: 50%;
 }
 
-.orbit, .hero-art, .hero-glow {
-  display: none !important;
-}
-
 .auth-copy h1 {
   letter-spacing: -2.5px;
 }
 
-.auth-copy h1 em, .hero-content h2 em {
+.auth-copy h1 em,
+.hero-content h2 em {
   color: #c0a8df;
 }
 
+/* Brand */
 .brand-mark {
   background: #78628f;
   box-shadow: none;
@@ -80,6 +82,7 @@ body {
   letter-spacing: 1.6px;
 }
 
+/* Sidebar */
 .sidebar {
   background: #15121e;
   border-right-color: rgba(205,190,230,.1);
@@ -89,7 +92,8 @@ body {
   border-radius: 8px;
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover,
+.nav-item.active {
   background: #292337;
   color: #f1eaf9;
 }
@@ -111,6 +115,7 @@ body {
   color: #bca4d8;
 }
 
+/* Main dashboard */
 .main-area {
   background: #100e18;
 }
@@ -128,6 +133,7 @@ body {
   max-width: 1280px;
 }
 
+/* Welcome banner */
 .hero-card {
   min-height: 270px;
   border: 1px solid rgba(190,164,222,.18);
@@ -154,6 +160,7 @@ body {
   border-radius: 7px;
 }
 
+/* Feature cards */
 .section-heading {
   margin-top: 34px;
 }
@@ -203,7 +210,9 @@ body {
   color: #c3a9e2;
 }
 
-.panel, .stat-card {
+/* Notes, assistant and admin panels */
+.panel,
+.stat-card {
   background: #191622;
   border-color: rgba(205,190,230,.11);
   border-radius: 11px;
@@ -219,19 +228,27 @@ body {
   background: #9279a9;
 }
 
-.auth-card input, .note-editor input,
-.note-editor textarea, .chat-input input {
+/* Input fields */
+.auth-card input,
+.note-editor input,
+.note-editor textarea,
+.chat-input input {
   background: #15121e;
   border-color: rgba(205,190,230,.15);
   border-radius: 8px;
 }
 
-.auth-card input:focus, .note-editor input:focus,
-.note-editor textarea:focus, .chat-input input:focus {
+.auth-card input:focus,
+.note-editor input:focus,
+.note-editor textarea:focus,
+.chat-input input:focus {
   border-color: #a88bc9;
 }
 
-.ai-badge, .welcome-spark, .message-avatar {
+/* AI assistant */
+.ai-badge,
+.welcome-spark,
+.message-avatar {
   color: #c5a9e4;
 }
 
@@ -247,10 +264,12 @@ body {
   background: #806995;
 }
 
+/* Admin */
 .admin-shortcut {
   background: #191622;
 }
 
+/* Music player */
 .music-page {
   height: calc(100vh - 145px);
   min-height: 520px;
@@ -263,14 +282,20 @@ body {
   background: #100e18;
 }
 
+/* Footer */
 .footer {
   border-top-color: rgba(205,190,230,.1);
 }
 
-button, a, input, textarea {
+/* Touchscreen support */
+button,
+a,
+input,
+textarea {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Tablet and smaller screens */
 @media (max-width: 900px) {
   .hero-card {
     min-height: 250px;
@@ -281,6 +306,7 @@ button, a, input, textarea {
   }
 }
 
+/* Mobile screens */
 @media (max-width: 650px) {
   .hero-card {
     min-height: 245px;
@@ -290,16 +316,22 @@ button, a, input, textarea {
     font-size: 32px;
   }
 
-  .music-page, .music-frame {
+  .music-page,
+  .music-frame {
     min-height: 480px;
   }
 }
 
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: .01ms !important;
   }
 }
+
+
